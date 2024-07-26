@@ -1,0 +1,565 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+  <head>
+      <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
+  <meta name="description" content="A growing collection of ready to use components for the CSS framework Bootstrap 5">
+  <link rel="apple-touch-icon" sizes="180x180" href="img/logo_img1.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/logo_img1.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/logo_img1.png">
+  <link rel="icon" type="image/png" sizes="96x96" href=".t/img/logo_img1.png">
+  <meta name="author" content="Holger Koenemann">
+  <meta name="generator" content="Eleventy v2.0.0">
+  <meta name="HandheldFriendly" content="true">
+  <title>RipeSense</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parse/3.3.0/parse.min.js"></script>
+  <link rel="stylesheet" href="css/theme.min.css">
+
+   <style>
+
+/* inter-300 - latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local(''),
+       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+</style>
+
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navScroll">
+
+    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
+  <div class="container">
+    <a class="navbar-brand pe-4 fs-4" href="index.html">
+      <img src="img/logo_img1.png" alt="Icon" style="width: 32px; height: 32px;">
+  <span class="ms-1 fw-bolder">RipeSense</span>
+</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#dashboard">
+            Dashboard
+          </a>
+        </li>
+      <li class="nav-item">
+    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
+      Ripeness
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#aboutus">
+      Variety
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#numbers">
+      Our Mission
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#gallery">
+      Gallery
+    </a>
+  </li>
+    </ul>
+    </div>
+</div>
+</nav>
+
+    <main>
+      <div class="w-100 overflow-hidden bg-gray-100" id="top">
+  
+<div class="container position-relative" style="margin-bottom: 10ch">
+  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/watermelon_img1.jpg);">
+    
+  </div>
+    <div class="row">
+
+<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
+  <h1 class="display-1 fw-bold mt-5">Watermelon Ripeness Dashboard</h1>
+  <p class="lead" style="width: 70%; text-align: justify;">An innovative company specializing in the development of a machine learning-based classification system for non-destructive watermelon inspection.</p>
+  <a href="#dashboard" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">Get started free</a>
+</div>
+</div>
+</div>
+
+</div>
+
+<div style="border-color: #000000; border-width: 10ch; border: 100%;"></div>
+
+<div class="bg-light w-100 overflow-hidden" id="dashboard">
+  <div>
+  <div class="dashboard-container">
+    <form id="watermelon-form">
+      <div>
+        <label for="variety" class="variety">Variety:</label>
+        <div class="select-style">
+        <select id="variety">
+          <option value="">Choose Variety of Watermelon</option>
+          <option value="Crimson">Crimson</option>
+          <option value="Sugar Baby">Sugar Baby</option>
+        </select>
+      </div>
+      <div>
+        <label for="ripeness" class="ripeness">Ripeness:</label>
+        <div class="select-style">
+        <select id="ripeness">
+          <option value="">Choose Ripeness of Watermelon</option>
+          <option value="Unripe">Unripe</option>
+          <option value="Ripe">Ripe</option>
+          <option value="Overripe">Overripe</option>
+        </select>
+      </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <div>
+    <p style="padding-left: 55ch;font-weight: bolder; font-size: 150%; margin-top: -5ch; margin-bottom: 9ch;">Records</p>
+    </div>
+    <div class="table-container">
+      <table id="watermelon-table" class="sticky-header">
+        <thead>
+          <tr>
+            <th>Count</th>
+            <th>Variety</th>
+            <th>Ripeness</th>
+            <th>Date and Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <script>
+            document.getElementById('watermelon-form').addEventListener('submit', function(event) {
+              event.preventDefault();
+    
+              const variety = document.getElementById('variety').value;
+              const ripeness = document.getElementById('ripeness').value;
+    
+              if (variety === 'null' || ripeness === 'null') {
+                alert('Please select both variety and ripeness');
+                return;
+              }
+              
+              const currentDate = new Date().toLocaleString();
+    
+              const table = document.getElementById('watermelon-table');
+              const row = document.createElement('tr');
+              const countCell = document.createElement('td');
+              const varietyCell = document.createElement('td');
+              const ripenessCell = document.createElement('td');
+              const dateTimeCell = document.createElement('td');
+    
+              countCell.textContent = table.rows.length;
+              varietyCell.textContent = variety;
+              ripenessCell.textContent = ripeness;
+              dateTimeCell.textContent = currentDate;
+    
+              row.appendChild(countCell);
+              row.appendChild(varietyCell);
+              row.appendChild(ripenessCell);
+              row.appendChild(dateTimeCell);
+    
+              if (ripeness === 'Ripe') {
+                row.classList.add('added');
+              }
+    
+              table.appendChild(row);
+    
+              const dataRef = ref(db, 'Watermelon');
+              const newDataRef = push(dataRef);
+    
+              set(newDataRef, {
+                variety: variety,
+                ripeness: ripeness,
+                timestamp: currentDate
+              }).catch(error => {
+                console.error("Error writing new data to Firebase Database", error);
+              });
+            });
+          </script>
+        </tbody>
+      </table>
+    </div>    
+  
+    <div style="display: flex; flex-direction: row;margin-bottom: 48ch; margin-top: -55ch;">
+      <p style="padding-left: 4ch; font-weight: bolder; font-size: 150%;">Variety</p>
+      <p style="padding-left: 16ch; font-weight: bolder; font-size: 150%;">Ripeness</p>
+    </div>
+  
+    <div class="chart-container">
+      <canvas id="varietyChart"></canvas>
+      <canvas id="ripenessChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+  
+    <script>
+      Parse.initialize("bfeFgJcvr9SewZFLeytBS6U56W3kOrLc3Cd4VBOm", "FlTnWSq7RHsCmqQru8wQ1voLirZzkalDQtSprccu");
+      Parse.serverURL = 'https://parseapi.back4app.com/';
+     
+      document.getElementById('watermelon-form').addEventListener('submit', handleFormSubmission);
+  
+      async function handleFormSubmission(event) {
+    event.preventDefault();
+    
+    const variety = document.getElementById('variety').value;
+    const ripeness = document.getElementById('ripeness').value;
+    
+    if (!variety ||!ripeness) {
+      alert('Please select both variety and ripeness');
+      return;
+    }
+  
+    const Watermelon = Parse.Object.extend('Watermelon');
+    const watermelon = new Watermelon();
+    
+    watermelon.set('variety', variety);
+    watermelon.set('ripeness', ripeness);
+    watermelon.set('timestamp', new Date().toISOString());
+    
+    try {
+      const result = await watermelon.save();
+      console.log('Watermelon created', result);
+      fetchAndDisplayCharts();
+      document.getElementById('variety').value = '';
+      document.getElementById('ripeness').value = '';
+    } catch (error) {
+      console.error('Error while creating Watermelon: ', error);
+    }
+  }
+  
+      async function fetchAndDisplayCharts() {
+        const Watermelon = Parse.Object.extend('Watermelon');
+        const query = new Parse.Query(Watermelon);
+  
+        try {
+          const results = await query.find();
+          const varietyCounts = { 'Crimson': 0, 'Sugar Baby': 0 };
+          const ripenessCounts = { 'Unripe': 0, 'Ripe': 0, 'Overripe': 0 };
+  
+          results.forEach((result) => {
+            const variety = result.get('variety');
+            const ripeness = result.get('ripeness');
+  
+            if (varietyCounts.hasOwnProperty(variety)) {
+              varietyCounts[variety]++;
+            }
+            if (ripenessCounts.hasOwnProperty(ripeness)) {
+              ripenessCounts[ripeness]++;
+            }
+          });
+  
+          createVarietyChart(Object.values(varietyCounts));
+          createRipenessChart(Object.values(ripenessCounts));
+        } catch (error) {
+          console.error('Error while fetching data: ', error);
+        }
+      }
+      
+      function createVarietyChart(data) {
+  const varietyCtx = document.getElementById('varietyChart').getContext('2d');
+  new Chart(varietyCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Crimson', 'Sugar Baby'],
+      datasets: [{
+        label: 'Watermelon Variety',
+        data: data, 
+        backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        datalabels: {
+          color: '#000',
+          formatter: (value, context) => {
+            return context.chart.data.labels[context.dataIndex];
+          }
+        }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+}
+
+function createRipenessChart(data) {
+  const ripenessCtx = document.getElementById('ripenessChart').getContext('2d');
+  new Chart(ripenessCtx, {
+    type: 'pie',
+    data: {
+      labels: ['Unripe', 'Ripe', 'Overripe'],
+      datasets: [{
+        label: 'Watermelon Ripeness',
+        data: data, 
+        backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+        borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)'],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        datalabels: {
+          color: '#000',
+          formatter: (value, context) => {
+            return context.chart.data.labels[context.dataIndex];
+          }
+        }
+      }
+    },
+    plugins: [ChartDataLabels]
+  });
+}
+
+  
+      fetchAndDisplayCharts();
+    </script>
+
+      <script>
+        document.querySelector('.scrollToTop').addEventListener('click', function() {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+        </script>
+    <script>
+      function reload() {
+              window.location.href = 'index.html';
+          }
+    </script>
+
+<div class="py-vh-5 w-100 overflow-hidden" id="services">
+  <div class="container">
+      <div class="row d-flex justify-content-end">
+<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6" style="text-align: justify;">Watermelon is a popular and refreshing fruit that belongs to the Cucurbitaceae family. It is a vining annual plant that is native to Africa and has been cultivated for over 4,000 years. However, it's not always easy to determine if they're ripe.</h2></div>
+</div>
+<div class="row d-flex align-items-center">
+<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+  <span class="h5 fw-lighter">01. </span>
+  <h3 class="py-5 border-top border-dark">Ripe Watermelon</h3>
+  <p style="text-align: justify;">A ripe watermelon is typically characterized by a few distinct signs. One of the best indicators is a large, creamy yellow spot on the underside of the melon, which is where it rested on the ground during ripening. This spot is often referred to as the "ground spot."</p>
+  <a href="https://www.southernliving.com/food/fruits/melon/watermelon/how-to-tell-if-watermelon-is-ripe" class="link-fancy">Learn more
+  </a>
+</div>
+
+<div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
+  <span class="h5 fw-lighter">02.</span>
+  <h3 class="py-5 border-top border-dark">Unripe Watermelon</h3>
+  <p style="text-align: justify;">An unripe watermelon is one that has not yet reached its full maturity and ripeness. It is typically have a pale or white flesh, and they may not have the characteristic sweet and refreshing flavor of a ripe watermelon. Researchgate notes that unripe watermelons have lower levels of beta carotene, lycopene, and other nutrients compared to ripe ones.</p>
+  <a href="https://portpotager.blogspot.com/2012/08/what-to-do-with-unripe-watermelon.html" class="link-fancy">Learn more
+  </a>
+</div>
+
+<div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
+  <span class="h5 fw-lighter">03.</span>
+  <h3 class="py-5 border-top border-dark">Overripe Watermelon</h3>
+  <p style="text-align: justify;">An overripe watermelon is one that has passed its peak ripeness and is beginning to deteriorate. Overripe watermelons may have soft spots on the surface, and the flesh may be mushy or watery. They may also have an unpleasantly sweet or sour taste, and the texture may be unappealingly soft or grainy.</p>
+  <a href="https://www.livestrong.com/article/522201-how-do-you-know-if-it-is-an-overripe-watermelon/" class="link-fancy">Learn more
+  </a>
+</div>
+</div>
+
+  </div>
+</div>
+
+<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+  <div class="container">
+      
+<div class="row d-flex justify-content-between align-items-center">
+  <div class="col-lg-6">
+  <div class="row gx-5 d-flex">
+    <div class="col-md-11">
+      <a href="https://www.kitchengardenseeds.com/watermelon-sugar-baby.html">
+      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/sugar-baby.jpg);--bs-aspect-ratio: 50%;">
+      </div>
+      </a>
+    </div>
+    <div class="col-md-5 offset-md-1">
+      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/sugar-baby.webp);">
+      </div>
+    </div>
+    <div class="col-md-6">
+      <a href="https://organorepublic.com/blogs/growing-guides/watermelon-crimson-sweet?currency=USD">
+        <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/crimson.jpg);--bs-aspect-ratio: 140%;">
+        </div>
+    </a>
+    
+    </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <span class="h5 fw-lighter">01.</span>
+  <h3 class="py-5 border-top border-dark" data-aos="fade-left">Sugar-baby Watermelon</h3>
+  <p data-aos="fade-left" data-aos-delay="200" style="text-align: justify;">Sugar Baby watermelon is a popular heirloom variety of watermelon that is known for its compact size, sweet flavor, and ease of growth. Sugar Baby watermelon is a reliable and easy-to-grow variety that is perfect for small gardens, containers, and beginners. It is also a good choice for those who want to harvest watermelons in a relatively short period of time.
+  </p>
+  <p>
+    <a href="https://bonnieplants.com/products/sugar-baby-watermelon" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
+    </a>
+  </p>
+  <div style="margin-top: 10ch;">
+  <span class="h5 fw-lighter">02.</span>
+  <h3 class="py-5 border-top border-dark" data-aos="fade-left">Crimson Watermelon</h3>
+  <p data-aos="fade-left" data-aos-delay="200" style="text-align: justify;">Crimson Sweet watermelon is a variety of watermelon that is round-to-oval in shape, averaging 25 lbs. in weight, with a rind having light green and dark green stripes. The inside has sweet, firm, bright, deep red flesh that is high in sugar content and contains very few, small seeds. It is one of the best-tasting of large melons with many disease-resistant traits. It was introduced by Kansas State University in 1963. Watermelons originated in Africa thousands of years ago.
+  </p>
+  <p>
+    <a href="https://bonnieplants.com/products/crimson-sweet-watermelon" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
+    </a>
+  </p>
+  </div>
+</div>
+
+</div>
+
+  </div>
+</div>
+
+<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
+  <div class="container" style="background-color: white;">
+      <div class="row d-flex justify-content-between align-items-center">
+  <div class="col-lg-5">
+    <h3 class="py-5 border-top border-dark display-6 mb-5" data-aos="fade-right" style="margin-top: 4ch;">About</h3>
+</div>
+<div class="col-lg-6">
+  <div class="row">
+    <div class="col-12">
+    <h2 class="display-6 mb-5" data-aos="fade-down" style="text-align: justify; width: 120%; margin-left: -6ch; margin-top: 1ch; font-size: 40px;">RipeSense, founded by a group of Computer Engineering students, aims to innovate in the agricultural technology sector. We are dedicated to providing advanced, non-destructive methods for fruit inspection, starting with watermelon.</h2>
+    </div>
+
+    <div class="col-12">
+      <h2 class="display-6 mb-5" data-aos="fade-down" style="text-align: justify; margin-top: 3ch; font-size: 4ch; font-size: 35px; margin-left: -5ch; font-weight: bold;">Our Mission</h2>
+      <h2 class="display-6 mb-5" data-aos="fade-down" style="text-align: justify; width: 120%; font-size: 35px; margin-left: -6ch; margin-top: -1.5ch;">Is to leverage machine learning and acoustic signal analysis to deliver reliable, user-friendly solution that enhance productivity and reduce waste in the agricultural industry. RipeSense is committed to sustainability, technological excellence, and customer satisfaction.</h2>
+    </div>
+  </div>
+</div>
+</div>
+
+  </div>
+</div>
+
+<div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
+  <div class="container-fluid">
+    <div class="col-12" style="margin-left: -13ch;">
+      <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
+        <div class="col-md-2" data-aos="fade-up">
+            <img src="img/watermelon-portrait1.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+        </div>
+
+        <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+            <img src="img/watermelon_img2.jpg" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
+        </div>
+
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+            <img src="img/watermelon_img3.jpg" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1029">
+        </div>
+
+        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+          <img src="img/watermelon_img4.jpg" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1354">
+      </div>
+
+      </div>
+    </div>
+   </div>
+ </div>
+
+  </div>
+</div>
+
+  <script>
+    Parse.initialize("bfeFgJcvr9SewZFLeytBS6U56W3kOrLc3Cd4VBOm", "FlTnWSq7RHsCmqQru8wQ1voLirZzkalDQtSprccu");
+    Parse.serverURL = 'https://parseapi.back4app.com/';
+
+    async function loadWatermelonData() {
+      const Watermelon = Parse.Object.extend('Watermelon');
+      const query = new Parse.Query(Watermelon);
+
+      try {
+        const results = await query.find();
+        const tableBody = document.getElementById('watermelon-table').getElementsByTagName('tbody')[0];
+        tableBody.innerHTML = ''; // Clear existing table contents
+        
+        results.forEach((watermelon, index) => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `<td>${index + 1}</td>
+                          <td>${watermelon.get('variety')}</td>
+                          <td>${watermelon.get('ripeness')}</td>
+                          <td>${new Date(watermelon.get('timestamp')).toLocaleString()}</td>`;
+          tableBody.appendChild(tr);
+        });
+      } catch (error) {
+        console.error('Error while fetching watermelons: ', error);
+      }
+    }
+
+    loadWatermelonData(); 
+  </script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/aos.js"></script>
+ <script>
+ AOS.init({
+   duration: 800, // values from 0 to 3000, with step 50ms
+ });
+ </script>
+
+ <script>
+  let scrollpos = window.scrollY
+  const header = document.querySelector(".navbar")
+  const header_height = header.offsetHeight
+
+  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
+  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+
+  window.addEventListener('scroll', function() {
+    scrollpos = window.scrollY;
+
+    if (scrollpos >= header_height) { add_class_on_scroll() }
+    else { remove_class_on_scroll() }
+
+    console.log(scrollpos)
+  })
+</script>
+
+  </body>
+</html>
